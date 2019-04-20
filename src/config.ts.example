@@ -1,0 +1,8 @@
+export default {
+    domoticzUrl: '',
+    host: 'localhost',
+    port: '',
+    timeout: 5000,
+    siteUrl: '*',
+    authorization: ''
+};
