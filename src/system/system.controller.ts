@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Post, Param } from '@nestjs/common';
 
 import { SystemService } from './system.service';
 import { Result } from '../types/interfaces';
@@ -10,5 +10,15 @@ export class SystemController {
     @Get('version')
     getVersion(): Promise<Result> {
         return this.systemService.getVersion();
+    }
+
+    @Post('log/:time?/:level?')
+    getLog(@Param('time') time: string, @Param('level') level: string): Promise<Result> {
+        return this.systemService.getLog(time, level);
+    }
+
+    @Get('reboot')
+    reboot(): Promise<Result> {
+        return this.systemService.reboot();
     }
 }
