@@ -1,3 +1,4 @@
+import { standartRequest } from './../helper';
 import { Injectable, HttpService } from '@nestjs/common';
 
 @Injectable()
@@ -10,19 +11,7 @@ export class SystemService {
             param: 'getversion'
         };
 
-        try {
-            const response = await this.httpService.get('/json.htm', { params }).toPromise();
-
-            return {
-                result: response.data,
-                error: null
-            };
-        } catch (error) {
-            return {
-                result: null,
-                error
-            }
-        }
+        return await standartRequest(this.httpService, params);
     }
 
     async getLog(time?: string, level?: string) {
@@ -39,19 +28,7 @@ export class SystemService {
             loglevel: level || '268435455'
         };
 
-        try {
-            const response = await this.httpService.get('/json.htm', { params }).toPromise();
-
-            return {
-                result: response.data,
-                error: null
-            };
-        } catch (error) {
-            return {
-                result: null,
-                error
-            };
-        }
+        return await standartRequest(this.httpService, params);
     }
 
     async reboot() {
@@ -60,18 +37,6 @@ export class SystemService {
             param: 'system_reboot'
         };
 
-        try {
-            const response = await this.httpService.get('/json.htm', { params }).toPromise();
-
-            return {
-                result: 'OK',
-                error: null
-            };
-        } catch (error) {
-            return {
-                result: null,
-                error
-            };
-        }
+        return await standartRequest(this.httpService, params);
     }
 }

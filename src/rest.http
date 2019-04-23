@@ -1,4 +1,4 @@
 GET http://localhost:3000/system/version
 
 ###
-POST http://localhost:3000/system/log/6000/2
+POST http://localhost:3000/system/log/6000/4
