@@ -60,7 +60,7 @@ export async function toogleDeviceStatus(transport: HttpService, idx: string | n
         type: 'command',
         param: 'switchlight',
         idx,
-        switchcmd: type
+        switchcmd: type // On Off Toggle
     };
 
     return standartRequest(transport, params);

@@ -1,6 +1,7 @@
-import { Result } from './../types/interfaces';
 import { LightService } from './light.service';
 import { Controller, Get, Post, Param } from '@nestjs/common';
+
+import { Result } from './../types/interfaces';
 
 @Controller('light')
 export class LightController {

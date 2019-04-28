@@ -11,3 +11,9 @@ GET http://localhost:3000/light
 ###
 POST http://localhost:3000/light/45/On
 
+###
+GET http://localhost:3000/boiler
+
+###
+POST http://localhost:3000/light/16/Toggle
+
