@@ -5,6 +5,8 @@ import { SystemController } from './system/system.controller';
 import { SystemService } from './system/system.service';
 import { ContentController } from './content/content.controller';
 import { ContentService } from './content/content.service';
+import { LightService } from './light/light.service';
+import { LightController } from './light/light.controller';
 
 
 import config from './config';
@@ -20,7 +22,7 @@ import config from './config';
       }
     }),
   ],
-  controllers: [AppController, SystemController, ContentController],
-  providers: [AppService, SystemService, ContentService],
+  controllers: [AppController, SystemController, ContentController, LightController],
+  providers: [AppService, SystemService, ContentService, LightService],
 })
 export class AppModule {}

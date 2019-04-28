@@ -5,5 +5,15 @@ export interface Result {
 
 export interface DomoticzParams {
     type: string;
-    param: string;
+    param?: string;
+    rid?: number;
+}
+
+export interface LightIdx {
+    waterheater: number; // водонагреватель
+    light: {
+        room: number;
+        hall: number;
+        kitchen: number;
+    };
 }

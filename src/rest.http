@@ -2,3 +2,12 @@ GET http://localhost:3000/system/version
 
 ###
 POST http://localhost:3000/system/log/6000/4
+###
+GET http://localhost:3000/content/getWaterHeaterInfo
+
+###
+GET http://localhost:3000/light
+
+###
+POST http://localhost:3000/light/45/On
+
