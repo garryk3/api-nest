@@ -9,7 +9,7 @@ import { LightService } from './light/light.service';
 import { LightController } from './light/light.controller';
 import { BoilerController } from './boiler/boiler.controller';
 import { BoilerService } from './boiler/boiler.service';
-
+import { AuthModule } from './auth/auth.module';
 
 import config from './config';
 
@@ -23,6 +23,7 @@ import config from './config';
         Authorization: config.authorization
       }
     }),
+    AuthModule
   ],
   controllers: [AppController, SystemController, ContentController, LightController, BoilerController],
   providers: [AppService, SystemService, ContentService, LightService, BoilerService],

@@ -17,3 +17,10 @@ export interface LightIdx {
         kitchen: number;
     };
 }
+
+export interface JwtPayload {
+    name: string;
+    password: string;
+    iat?: number;
+    exp?: number;
+}

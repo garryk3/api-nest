@@ -17,3 +17,13 @@ GET http://localhost:3000/boiler
 ###
 POST http://localhost:3000/light/16/Toggle
 
+###
+
+POST http://localhost:3000/auth/token
+content-type: application/json
+
+{"name": "admin", "password": "admin"}
+
+###
+GET http://localhost:3000/auth/data
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4iLCJwYXNzd29yZCI6ImFkbWluIiwiaWF0IjoxNTU2ODkyMTYwLCJleHAiOjE1NjA0OTIxNjB9.yGTDXr7nddjo9Ait3QciW2cojv25IuvoigN8TkwJ3TM

@@ -4,5 +4,8 @@ export default {
     port: '',
     timeout: 5000,
     siteUrl: '*',
-    authorization: ''
+    authorization: '',
+    users: [{
+        test: 'test'
+    }]
 };
