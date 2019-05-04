@@ -13,17 +13,14 @@ POST http://localhost:3000/light/45/On
 
 ###
 GET http://localhost:3000/boiler
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4iLCJwYXNzd29yZCI6ImFkbWluIiwiaWF0IjoxNTU2OTY0NTYxLCJleHAiOjE1NTY5NjgxNjF9.aDCrZui4FlbaphPhblBPmcb7ayQb5h1_G7bTin4XK1I
 
 ###
 POST http://localhost:3000/light/16/Toggle
 
 ###
 
-POST http://localhost:3000/auth/token
+POST http://localhost:3000/auth/login
 content-type: application/json
 
 {"name": "admin", "password": "admin"}
-
-###
-GET http://localhost:3000/auth/data
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4iLCJwYXNzd29yZCI6ImFkbWluIiwiaWF0IjoxNTU2ODkyMTYwLCJleHAiOjE1NjA0OTIxNjB9.yGTDXr7nddjo9Ait3QciW2cojv25IuvoigN8TkwJ3TM

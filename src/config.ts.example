@@ -7,5 +7,9 @@ export default {
     authorization: '',
     users: [{
         test: 'test'
-    }]
+    }],
+    jwt: {
+        secretKey: 'key',
+        expires: 6000
+    }
 };

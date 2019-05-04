@@ -24,3 +24,8 @@ export interface JwtPayload {
     iat?: number;
     exp?: number;
 }
+
+export interface JwtResult {
+    expiresIn: number;
+    accessToken: string;
+}
