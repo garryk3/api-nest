@@ -4,7 +4,10 @@ import Swagger from './swagger';
 import config from './config';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const corsConfig = {
+    origin: 'http://localhost:8080'
+  };
+  const app = await NestFactory.create(AppModule, { cors: corsConfig });
 
   new Swagger(app).init();
 

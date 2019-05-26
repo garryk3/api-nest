@@ -11,5 +11,8 @@ export default {
     jwt: {
         secretKey: 'key',
         expires: 6000
+    },
+    cors: {
+        origin: 'http:localhost:8080'
     }
 };

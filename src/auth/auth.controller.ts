@@ -9,6 +9,7 @@ export class AuthController {
 
     @Post('login')
     async login(@Body('name') name: string, @Body('password') password: string) {
+        console.log('@@@@@@@@', name)
         return this.authService.login({ name, password });
     }
 }
