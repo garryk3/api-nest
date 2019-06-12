@@ -12,7 +12,7 @@ export class BoilerService {
     }
 
     getStatus(): Promise<Result> {
-        return requestDeviceStatus(this.httpService, this.boilerIdx)
+        return requestDeviceStatus(this.httpService, this.boilerIdx);
     }
 
     toggleDevice(type: string): Promise<Result> {

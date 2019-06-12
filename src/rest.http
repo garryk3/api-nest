@@ -6,17 +6,28 @@ POST http://localhost:3000/system/log/6000/4
 GET http://localhost:3000/content/getWaterHeaterInfo
 
 ###
-GET http://localhost:3000/light
+GET http://localhost:9000/light
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4iLCJwYXNzd29yZCI6ImFkbWluIiwiaWF0IjoxNTYwMzUxMjk0LCJleHAiOjE1NjAzNTQ4OTR9.bs-lsa3q9cmUuLKscpCv5L6TINc0AEdiSILXgTfoF-w
 
 ###
-POST http://localhost:3000/light/45/On
+GET http://localhost:9000/plugs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4iLCJwYXNzd29yZCI6ImFkbWluIiwiaWF0IjoxNTYwMzU2OTgzLCJleHAiOjE1NjAzNjA1ODN9.Cz6HbpNOjkOOd7E5vk2fFhoNKpalRcUIuEgJmw1fPAA
 
 ###
-GET http://localhost:3000/boiler
+POST http://localhost:9000/plugs/16/On
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4iLCJwYXNzd29yZCI6ImFkbWluIiwiaWF0IjoxNTYwMzU2OTgzLCJleHAiOjE1NjAzNjA1ODN9.Cz6HbpNOjkOOd7E5vk2fFhoNKpalRcUIuEgJmw1fPAA
+
+
+###
+POST http://localhost:9000/light/45/Off
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4iLCJwYXNzd29yZCI6ImFkbWluIiwiaWF0IjoxNTYwMzU2OTgzLCJleHAiOjE1NjAzNjA1ODN9.Cz6HbpNOjkOOd7E5vk2fFhoNKpalRcUIuEgJmw1fPAA
+
+###
+GET http://localhost:9000/boiler
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4iLCJwYXNzd29yZCI6ImFkbWluIiwiaWF0IjoxNTU2OTY0NTYxLCJleHAiOjE1NTY5NjgxNjF9.aDCrZui4FlbaphPhblBPmcb7ayQb5h1_G7bTin4XK1I
 
 ###
-POST http://localhost:3000/light/16/Toggle
+POST http://localhost:9000/light/16/Toggle
 
 ###
 

@@ -1,21 +1,21 @@
 import { Injectable, HttpService } from '@nestjs/common';
-import { Result } from './../types/interfaces';
+import { Result } from '../types/interfaces';
 
-import { idxNumbers, requestDeviceStatus, toogleDeviceStatus } from './../helper';
+import { idxNumbers, requestDeviceStatus, toogleDeviceStatus } from '../helper';
 
 @Injectable()
-export class LightService {
-    private readonly lightDevicesIdx: number[];
+export class PlugsService {
+    private readonly plugsDevicesIdx: number[];
 
     constructor(private readonly httpService: HttpService) {
-        this.lightDevicesIdx = Object.values(idxNumbers.light);
+        this.plugsDevicesIdx = Object.values(idxNumbers.plugs);
     }
 
     async getAllDevicesStatuse(): Promise<Result> {
-        const lightDeviceInfoRequests = this.lightDevicesIdx.map((idx) => {
+        const plugsDeviceInfoRequests = this.plugsDevicesIdx.map((idx) => {
             return requestDeviceStatus(this.httpService, idx);
         });
-        const statuses = await Promise.all(lightDeviceInfoRequests);
+        const statuses = await Promise.all(plugsDeviceInfoRequests);
 
         return {
             error: null,
@@ -28,10 +28,10 @@ export class LightService {
     }
 
     async switchAllOff(): Promise<Result> {
-        const lightDeviceToggleRequests = this.lightDevicesIdx.map((idx) => {
+        const plugsDeviceToggleRequests = this.plugsDevicesIdx.map((idx) => {
             return toogleDeviceStatus(this.httpService, idx, 'Off');
         });
-        const result = await Promise.all(lightDeviceToggleRequests);
+        const result = await Promise.all(plugsDeviceToggleRequests);
 
         return {
             error: null,

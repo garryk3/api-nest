@@ -7,6 +7,8 @@ import { ContentController } from './content/content.controller';
 import { ContentService } from './content/content.service';
 import { LightService } from './light/light.service';
 import { LightController } from './light/light.controller';
+import { PlugsService } from './plugs/plugs.service';
+import { PlugsController } from './plugs/plugs.controller';
 import { BoilerController } from './boiler/boiler.controller';
 import { BoilerService } from './boiler/boiler.service';
 import { AuthModule } from './auth/auth.module';
@@ -25,7 +27,7 @@ import config from './config';
     }),
     AuthModule
   ],
-  controllers: [AppController, SystemController, ContentController, LightController, BoilerController],
-  providers: [AppService, SystemService, ContentService, LightService, BoilerService],
+  controllers: [AppController, SystemController, ContentController, LightController, BoilerController, PlugsController],
+  providers: [AppService, SystemService, ContentService, LightService, BoilerService, PlugsService],
 })
 export class AppModule {}

@@ -1,4 +1,4 @@
-import { Result, DomoticzParams, LightIdx } from './types/interfaces';
+import { Result, DomoticzParams, DeviceIdx } from './types/interfaces';
 import { HttpService } from '@nestjs/common';
 
 export async function standartRequest(transport: HttpService, params: DomoticzParams): Promise<Result> {
@@ -17,12 +17,30 @@ export async function standartRequest(transport: HttpService, params: DomoticzPa
     }
 }
 
-export const idxNumbers: LightIdx =  {
+export const idxNumbers: DeviceIdx =  {
     waterheater: 16, // водонагреватель
     light: {
         room: 20,
         hall: 21,
         kitchen: 45
+    },
+    plugs: {
+        bathroomBoiler: 16,
+        kitchenDevicePanel: 7,
+        kitchenCommon: 8,
+        kitchenDeviceOven: 9,
+        kitchenDishwasher: 10,
+        kitchenMicrowave: 11,
+        kitchenWall: 12,
+        kitchenTV: 13,
+        roomTV: 25,
+        bathroomTowelDryer: 14,
+        bathroomKitchenWasher: 15,
+        roomCommon1: 17,
+        roomCommon2: 19,
+        roomPC: 18,
+        outerPlug1: 48,
+        outerPlug2: 50 
     }
 };
 
