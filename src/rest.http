@@ -3,11 +3,11 @@ GET http://localhost:9000/system/version
 ###
 POST http://localhost:3000/system/log/6000/4
 ###
-GET http://localhost:3000/content/getWaterHeaterInfo
+GET http://localhost:9000/content/getWaterHeaterInfo
 
 ###
 GET http://localhost:9000/light
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4iLCJwYXNzd29yZCI6ImFkbWluIiwiaWF0IjoxNTYwMzUxMjk0LCJleHAiOjE1NjAzNTQ4OTR9.bs-lsa3q9cmUuLKscpCv5L6TINc0AEdiSILXgTfoF-w
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoidGVzdCIsInBhc3N3b3JkIjoidGVzdCIsImlhdCI6MTU2NTg4NzIxNCwiZXhwIjoxNTY1ODkzMjE0fQ.Oan0dpKShJCd1fupDWOeNKgP6hYy8SwBGC5ga2t0naA
 
 ###
 GET http://localhost:9000/plugs
@@ -34,4 +34,4 @@ POST http://localhost:9000/light/16/Toggle
 POST http://localhost:9000/auth/login
 content-type: application/json
 
-{"name": "admin", "password": "admin"}
+{"name": "test", "password": "test"}
